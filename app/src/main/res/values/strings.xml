@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OpenWeather</string>
+    <string name="brak">Wpisz nazwę miasta</string>
+</resources>
