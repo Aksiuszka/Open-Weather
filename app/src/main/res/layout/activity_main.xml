@@ -92,14 +92,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnGet" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/weatherIconImageView"
-        android:layout_width="99dp"
-        android:layout_height="93dp"
+        android:layout_width="118dp"
+        android:layout_height="98dp"
         app:layout_constraintBottom_toTopOf="@+id/etCity"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name"
-        android:src="@drawable/unknown" />
+        app:layout_constraintTop_toTopOf="@+id/app_name"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/unknown" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

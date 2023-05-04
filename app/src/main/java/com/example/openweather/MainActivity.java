@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText etCity;
     TextView tvResult;
-    ImageButton imgWeatherIcon;
+    ImageView imgWeatherIcon;
     private final String url = "https://api.openweathermap.org/data/2.5/weather";
     private final String appid = "e53301e27efa0b66d05045d91b2742d3";
     String output = "";
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         etCity = (EditText) findViewById(R.id.etCity);
         tvResult = (TextView) findViewById(R.id.tvResult);
         tvResult.setPadding(16, 16, 16, 16);
-        imgWeatherIcon = (ImageButton) findViewById(R.id.weatherIconImageView);
+        imgWeatherIcon = (ImageView) findViewById(R.id.weatherIconImageView);
     }
 
     public void getWeatherDetails(View view) {
@@ -94,8 +94,21 @@ public class MainActivity extends AppCompatActivity {
             case "01d":
                 return R.drawable.sun;
             case "02d":
+            case "03d":
+            case "04d":
                 return R.drawable.cloudy;
-            // Add more cases for other weather conditions
+            case "09d":
+            case "10d":
+                return R.drawable.rainy;
+            case "01n":
+                return R.drawable.moon;
+            case "02n":
+            case "03n":
+            case "04n":
+                return R.drawable.cloudy;
+            case "09n":
+            case "10n":
+                return R.drawable.rainy;
             default:
                 return R.drawable.unknown;
         }
